@@ -28,12 +28,21 @@ The data points taken into consideration are various, and sometimes not that bla
   - _Is there an active and significant community behind the crate?_
 - **Big and/or famous crates association**
   - _Does any other big crate uses this code?_
+- **GitHub API**
+  - _Last commit date_
+  - _Issue/PR activity_
+  - _Security advisories_
+  - _Stars/watchers as popularity metrics_
+- **RustSec Advisory Database**
+  - `https://github.com/RustSec/advisory-db`
+- **docs.rs**
+  - _check status to establish health_
 
-## Tech Stack
+## Core Stack
 
 ### Crates.io API
 
-The main API is at `https://crates.io/api/v1/`
+The main API we hit is `https://crates.io/api/v1/`
 
 - Crate info: `GET /crates/{crate_name}` - gives you basic metadata
 - Crate versions: `GET /crates/{crate_name}/versions` - version history, release dates
