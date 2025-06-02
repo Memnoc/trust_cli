@@ -51,3 +51,28 @@ The main API we hit is `https://crates.io/api/v1/`
 - Download stats: `GET /crates/{crate_name}/downloads`- download statistics
 - Dependencies: `GET /crates/{crate_name}/{version}/dependencies` - what it depends on
 - Reverse dependencies: `GET /crates/{crate_name}/reverse_dependencies` - what depends on it
+
+## An example output
+
+```$ cargo trust
+Analyzing 12 dependencies...
+
+✅ serde (1.0.190): Score 95/100
+   Maintenance: ████████████ Excellent
+   Security:    ████████████ No issues
+   Popularity:  ████████████ Widely used
+
+⚠️  random-crate (0.1.0): Score 42/100
+   Maintenance: ██░░░░░░░░░░ Last updated 2 years ago
+   Security:    ████████████ No issues
+   Popularity:  ██░░░░░░░░░░ Low usage
+
+❌ abandoned-lib (0.0.1): Score 15/100
+   Maintenance: ░░░░░░░░░░░░ Likely abandoned
+   Security:    ██░░░░░░░░░░ 1 vulnerability
+   Popularity:  ░░░░░░░░░░░░ Minimal usage
+```
+
+```
+
+```
