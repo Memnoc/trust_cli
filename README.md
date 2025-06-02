@@ -1,4 +1,6 @@
-# Trust - A dependency utility
+# Trust
+
+## A dependency utility checker
 
 Trust is a command that your run under `cargo` and outputs a `trust score` of the crates and their dependencies in your project.
 
