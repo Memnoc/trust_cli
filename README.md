@@ -8,7 +8,7 @@ Trust is a command that your run under `cargo` and outputs a `trust score` of th
 
 As projects become larger and larger, it is almost inevitable a huge amount of dependencies will end up in your tree. This is not only true for highly vetted, large projects that are typically found in medium-large companies, but also for relatively small projects.
 
-While using dependencies can greatly simplify your app by reducing the amount of code you need to write, while providing a level of abstraction developers can get on board with, the fact of the matter is: can you trust and can you keep track of the "health" of your dependencies?
+While using dependencies can greatly simplify your app by reducing the amount of code you need to write, while providing a level of abstraction developers can get on board with, the fact of the matter is: can you trust and can you keep track of the "health" of your dependencies
 
 ## The solution
 
@@ -76,3 +76,19 @@ Analyzing 12 dependencies...
 ## Dependencies
 
 This is a fun part, because a tool that claims to check for dependencies should have as less as possible.
+Check the **devnotes.md** for a full list of dependencies.
+
+## License
+
+Licensed under either of
+
+- Apache License, Version 2.0 ([LICENSE-APACHE](LICENSE-APACHE) or http://www.apache.org/licenses/LICENSE-2.0)
+- MIT license ([LICENSE-MIT](LICENSE-MIT) or http://opensource.org/licenses/MIT)
+
+at your option.
+
+### Contribution
+
+Unless you explicitly state otherwise, any contribution intentionally submitted
+for inclusion in the work by you, as defined in the Apache-2.0 license, shall be
+dual licensed as above, without any additional terms or conditions.
