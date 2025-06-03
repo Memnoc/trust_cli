@@ -12,7 +12,7 @@ keywords = ["cargo", "dependencies", "security", "audit", "trust"]
 categories = ["development-tools::cargo-plugins", "command-line-utilities"]
 
 [[bin]]
-name = "cargo-trust"
+name = "trust-cli"
 path = "src/main.rs"
 
 [dependencies]
