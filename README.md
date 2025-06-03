@@ -73,7 +73,6 @@ Analyzing 12 dependencies...
    Popularity:  ░░░░░░░░░░░░ Minimal usage
 ```
 
-```
+## Dependencies
 
-```
-
+This is a fun part, because a tool that claims to check for dependencies should have as less as possible.

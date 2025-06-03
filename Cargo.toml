@@ -1,6 +1,56 @@
 [package]
-name = "trust"
+name = "trust-cli"
 version = "0.1.0"
 edition = "2024"
+authors = ["Memnoc <memnochmod@gmail.com>"]
+description = "Analyze and score Rust crate dependencies for security and maintenance"
+homepage = "https://github.com/Memnoc/trust-cli"
+repository = "https://github.com/Memnnoc/trust-cli"
+license = "MIT"
+readme = "README.md"
+keywords = ["cargo", "dependencies", "security", "audit", "trust"]
+categories = ["development-tools::cargo-plugins", "command-line-utilities"]
+
+[[bin]]
+name = "cargo-trust"
+path = "src/main.rs"
 
 [dependencies]
+# Core functionality
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+toml = "0.8"
+
+# HTTP client - using ureq for simplicity
+ureq = "2.9"
+
+# CLI argument parsing
+clap = { version = "4.4", features = ["derive", "cargo"] }
+
+# Utilities
+directories = "5.0" # Cross-platform cache directories
+chrono = { version = "0.4", default-features = false, features = [
+  "clock",
+  "serde",
+] }
+
+# Error handling (optional but recommended)
+thiserror = "1.0"
+anyhow = "1.0"
+
+[dev-dependencies]
+# Testing utilities
+tempfile = "3.8"
+mockito = "1.2"
+pretty_assertions = "1.4"
+
+[profile.release]
+lto = true
+codegen-units = 1
+strip = true
+opt-level = "z"   # Optimize for size
+
+[package.metadata.binstall]
+pkg-url = "{ repo }/releases/download/v{ version }/{ name }-{ target }.tar.gz"
+bin-dir = "{ bin }{ binary-ext }"
+pkg-fmt = "tgz"
