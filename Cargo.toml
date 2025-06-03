@@ -1,18 +1,18 @@
 [package]
-name = "trust-cli"
+name = "trust_cli"
 version = "0.1.0"
 edition = "2024"
 authors = ["Memnoc <memnochmod@gmail.com>"]
 description = "Analyze and score Rust crate dependencies for security and maintenance"
-homepage = "https://github.com/Memnoc/trust-cli"
-repository = "https://github.com/Memnnoc/trust-cli"
+homepage = "https://github.com/Memnoc/trust_cli"
+repository = "https://github.com/Memnnoc/trust_cli"
 license = "MIT"
 readme = "README.md"
 keywords = ["cargo", "dependencies", "security", "audit", "trust"]
 categories = ["development-tools::cargo-plugins", "command-line-utilities"]
 
 [[bin]]
-name = "trust-cli"
+name = "trust_cli"
 path = "src/main.rs"
 
 [dependencies]
@@ -38,10 +38,10 @@ tempfile = "3.8"
 mockito = "1.2"
 pretty_assertions = "1.4"
 
-# Leaving this here to remind myself I want optimization 
+# WARN: Leaving this here to remind myself I want optimization 
 # when I distribute not-in-dev
 [profile.release]
 lto = true
 codegen-units = 1
 strip = true
-opt-level = "z"   # Optimize for size
+opt-level = "z"
