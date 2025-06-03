@@ -16,41 +16,32 @@ name = "cargo-trust"
 path = "src/main.rs"
 
 [dependencies]
-# Core functionality
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
 toml = "0.8"
 
-# HTTP client - using ureq for simplicity
-ureq = "2.9"
+ureq = "3"
 
-# CLI argument parsing
 clap = { version = "4.4", features = ["derive", "cargo"] }
 
-# Utilities
-directories = "5.0" # Cross-platform cache directories
+directories = "6.0" # Cross-platform cache directories
 chrono = { version = "0.4", default-features = false, features = [
   "clock",
   "serde",
 ] }
 
-# Error handling (optional but recommended)
-thiserror = "1.0"
+thiserror = "2.0"
 anyhow = "1.0"
 
 [dev-dependencies]
-# Testing utilities
 tempfile = "3.8"
 mockito = "1.2"
 pretty_assertions = "1.4"
 
+# Leaving this here to remind myself I want optimization 
+# when I distribute not-in-dev
 [profile.release]
 lto = true
 codegen-units = 1
 strip = true
 opt-level = "z"   # Optimize for size
-
-[package.metadata.binstall]
-pkg-url = "{ repo }/releases/download/v{ version }/{ name }-{ target }.tar.gz"
-bin-dir = "{ bin }{ binary-ext }"
-pkg-fmt = "tgz"
