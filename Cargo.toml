@@ -32,6 +32,7 @@ chrono = { version = "0.4", default-features = false, features = [
 
 thiserror = "2.0"
 anyhow = "1.0"
+rustsec = "0.30.2"
 
 [dev-dependencies]
 tempfile = "3.8"
